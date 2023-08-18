@@ -25,6 +25,6 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/create-react-app:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/create-react-app:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/create-react-app:buildcache,mode=max
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-pnpm:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/docker-pnpm:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/docker-pnpm:buildcache,mode=max
